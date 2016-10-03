@@ -5989,9 +5989,9 @@ p.subintro {
 .article-grid {
   background: #fefefd;
   float: left;
-  width: 65%;
+  width: 75%;
   padding: 0px 10px;
-  height: 80px; }
+  height: 75%; }
   .article-grid  a:hover {
     text-decoration: none;
   }

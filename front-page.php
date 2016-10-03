@@ -111,7 +111,7 @@
               <img src="<?php the_field('square_feature_image', $recent["ID"]); ?>" alt="" class="img-responsive">
             </div>
             <div class="article-grid">
-              <span class="article-type"><?php echo get_cat_name($recent["$cat_name"]); ?></span>
+              <span class="article-type"><?php echo $recent["cat_name"]; ?></span>
               <a href="<?php echo get_permalink($recent["ID"]); ?>"><h4>
                 <?php echo $recent["post_title"] ?>
               </h4></a>
