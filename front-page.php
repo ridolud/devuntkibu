@@ -5,6 +5,7 @@
     <?php
 
     // check if the repeater field has rows of data
+    // check dhery
     if( have_rows('banner') ):
 
       // loop through the rows of data
