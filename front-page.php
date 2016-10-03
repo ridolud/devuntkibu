@@ -27,7 +27,7 @@
     ?>
   </ol>
   <!-- Wrapper for slides -->
-  <div class='carousel-inner' role='listbox'>
+  <div class='carousel-inner ' role='listbox'>
     <?php
 
     // check if the repeater field has rows of data
@@ -38,8 +38,10 @@
     ?>
           <div class='item <?php echo $i == 0  ? "active" : "" ?>' style="background:url('<?php the_sub_field('image'); ?>') no-repeat center center; background-size: cover;">
             <div class='carousel-caption'>
+              <div class='inner-caption hidden-xs'>
               <h1><?php the_sub_field('title'); ?></h1>
               <p><?php the_sub_field('subtitle'); ?></p>
+              </div>
             </div>
           </div>
     <?php
@@ -57,10 +59,12 @@
   </div>
   <!-- Controls -->
   <a class='left carousel-control hidden-xs' data-slide='prev' href='#carousel-example-generic' role='button'>
-    <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/arrow-right.png" />
+    <!-- <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/arrow-right.png" /> -->
+  <i class="glyphicon glyphicon-chevron-left"></i>
   </a>
   <a class='right carousel-control hidden-xs' data-slide='next' href='#carousel-example-generic' role='button'>
-    <img class="arrow-left" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/arrow-left.png" />
+    <!-- <img class="arrow-left" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/arrow-left.png" /> -->
+  <i class="glyphicon glyphicon-chevron-right"></i>
   </a>
 </div>
 <div class='container-fluid text-center content white home'>

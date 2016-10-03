@@ -5447,8 +5447,8 @@ button.close {
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-prev,
   .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
+    /*width: 30px;*/
+    /*height: 30px;*/
     margin-top: -15px;
     font-size: 30px; }
   .carousel-control .glyphicon-chevron-left,
@@ -7839,11 +7839,16 @@ a img.aligncenter {
       /*CUSTOM CSS*/
 
 /*Detol - Header*/
+#dettol-header *{
+  border: none;
+}
 #dettol-header{
   margin-top:40px;
   background-color: transparent;
   border-color: transparent;
-  transition: all 0.2s;
+  opacity: 1;
+  transition: all 0.4s;
+  z-index: 1000;
 }
 #dettol-header.navbar{
   min-height: 72px;
@@ -7888,6 +7893,7 @@ a img.aligncenter {
 #dettol-header.full-top{
   margin-top: 9px;
   background: #fff;
+  /*border-bottom: 2px solid*/
 }
 #dettol-header.full-top .dettol-menu-header > li > a{
   color: #888;
@@ -7935,6 +7941,69 @@ a img.aligncenter {
     padding: 10px 15px
   }
 }
-
-
 /*end detol-header*/
+
+
+
+/*Carousel*/
+.carousel{
+  border-bottom: 5px solid #56af45;
+}
+.carousel .inner-caption{
+
+}
+.carousel .inner-caption h1{
+  margin-top: 0px;
+  font-size: 46px;
+  font-weight: 400;
+}
+
+.carousel-indicators{
+  display: none;
+}
+.carousel-control{
+opacity: 1;
+}
+.carousel .right,.carousel .left{
+  background-image: none;
+}
+.carousel .right i, .carousel .left i{
+  background: #56af45;
+  padding: 10px;
+  color: #fff;
+  text-shadow: none;
+}
+@media (min-width:992px) {
+  .carousel .inner-caption{
+    margin-top: 40%;
+    width: 85%;
+    padding: 20px 50px 20px 25px;
+    margin-right: -211px;
+    background: #fff;
+    color: #616161;
+    text-shadow: none;
+    text-align: left;
+    float:right;
+  }
+  .carousel .inner-caption h1{
+    font-size: 46px;
+  }
+  .carousel .inner-caption p{
+    font-size: 16px
+  }
+}
+@media (min-width:768px) and (max-width:991px) {
+  .carousel .inner-caption{
+    margin-top: 40%;
+    width: 100%;
+    padding: 20px 50px 20px 25px;
+    margin-right: -111px;
+  }
+  .carousel .inner-caption h1{
+    font-size: 28px;
+  }
+  .carousel .inner-caption p{
+    font-size: 14px
+  }
+}
+/*end Carousel*/
