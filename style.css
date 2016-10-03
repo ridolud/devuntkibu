@@ -7843,12 +7843,13 @@ a img.aligncenter {
   margin-top:40px;
   background-color: transparent;
   border-color: transparent;
+  transition: all 0.2s;
 }
 #dettol-header.navbar{
   min-height: 72px;
 }
 #dettol-header .navbar-brand{
-  height: 72px;
+  height: 71px;
   padding: 25px 25px;
   background: #fff;
 }
@@ -7884,7 +7885,13 @@ a img.aligncenter {
 #dettol-header .menu-right li.search-bar a{
   color: #fff;
 }
-
+#dettol-header.full-top{
+  margin-top: 9px;
+  background: #fff;
+}
+#dettol-header.full-top .dettol-menu-header > li > a{
+  color: #888;
+}
 @media(min-width: 992px) and (max-width: 1200px){
   .navbar .container-fluid {
     padding-right: 30px;

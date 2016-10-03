@@ -94,12 +94,13 @@ function fbShare(url, title, descr, image, winWidth, winHeight) {
   triggerBttn.addEventListener( 'click', toggleOverlay );
   closeBttn.addEventListener( 'click', toggleOverlay );
 })();
-
-$(window).scroll(function () {
+jQuery(document).ready(function($) {
+  $( window ).scroll(function () {
      var sc = $(window).scrollTop()
-    if (sc > 200) {
+    if (sc > 100) {
         $("#dettol-header").addClass("full-top")
     } else {
         $("#dettol-header").removeClass("full-top")
     }
+  });
 });
