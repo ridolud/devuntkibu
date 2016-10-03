@@ -1,0 +1,82 @@
+/* 
+    Document   : tutorial
+    Created on : 12-Oct-2012, 16:01:56
+    Author     : Emma Lewis
+    Description: Basic styles for tutorial
+        
+*/
+/*.artikel .content {width:90%;margin:0 5%;}*/
+/*h1 {padding:40px 0;}*/
+
+.masonry {clear:both;}
+
+.article {display:block;margin-right:10px;float:left;}
+.pagination {clear:both;}
+
+.narrow {width:316px;}
+.medium {width:200px;}
+.large {width:590px;}
+
+.article .image{background:url(../img/ajax-loader.gif) no-repeat center center;display:block;}
+.article .image img {opacity:0;}
+.no-js .article .image, .article .image.loaded{background:none !important;}
+
+.article.narrow img {height:107px;}
+/*.article.medium img {height:219px;}*/
+.article.large img {height:332px;}
+
+.article h3 {font-size:1.2em;}
+.article h3 ul {list-style:none;padding:0;margin:0;}
+
+
+#infscr-loading{
+  padding: 8px 14px;
+  /* width: 200px; */
+  /* height: 40px; */
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  margin-left: -100px;
+  bottom: -20px;
+  /* overflow: hidden; */
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background: #d2cfc4;
+  /* border: 1px solid #eee; */
+}
+
+#infscr-loading .isi {float: left;}
+#infscr-loading img{float:right;}
+#infscr-loading .bearwithus{margin-left:45px;display:block;line-height:1em;margin-bottom:2px;}
+#infscr-loading .loading{
+  margin-right: 10px;
+  margin-left: 10px;
+  display: block;
+  margin-top: 5px;
+  line-height: 1em;
+  color: #fefefd;
+  font-size: 16px;
+}
+
+@media(max-width:656px){
+  .article.narrow img {height:107px;}
+  .article.medium img {height:219px;}
+  .article.large img {height:219px;}
+
+  .masonry {margin:0 auto;width:100%;}
+  
+  .narrow {width:190px;} 
+  .medium, .large {width:390px;}
+  
+}
+
+@media(max-width:434px){
+  .article.narrow img {height:107px;}
+  .article.medium img {height:107px;}
+  .article.large img {height:107px;}
+
+  .masonry {margin:0 auto;width:100%;}
+  .narrow, .medium, .large {width:190px;}
+  
+}

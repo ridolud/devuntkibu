@@ -1,0 +1,153 @@
+.sprites {
+	background: url('assets/images/sprites.png');
+
+	&.logo {
+		background-position: 0px 0px;
+		width: 147px;
+		height: 55px;
+		margin-top: -15px;
+	}
+	&.dettol {
+		background-position: -154px 0px;
+		height: 71px;
+		width: 57px;
+	}
+	&.circle-crib, &.circle-mom, &.circle-baby, &.circle-home {
+		margin: 0 auto;
+	}
+	&.circle-mom {
+		background-position: 0px -71px;
+		height: 105px;
+		width: 102px;
+	}
+	&.circle-crib {
+		background-position: -105px -71px ;
+		height: 105px;
+		width: 102px;
+	}
+	&.circle-baby {
+		background-position: 0px -180px;
+		height: 105px;
+		width: 102px;
+	}
+	&.circle-home {
+		background-position: -105px -180px;
+		height: 105px;
+		width: 102px;
+	}
+	&.web {
+		background-position: 0px -286px;
+		width: 43px;
+		height: 43px
+	}
+	&.facebook {
+		background-position: -45px -286px;
+		width: 43px;
+		height: 43px
+	}
+	&.twitter {
+		background-position: -91px -286px;
+		width: 43px;
+		height: 43px
+	}
+	&.youtube {
+		background-position: -137px -286px;
+		width: 43px;
+		height: 43px
+	}
+	&.alfamart {
+		background-position: -2px -341px;
+		height: 28px;
+		width: 115px;
+		margin-top: -10px;
+	}
+	&.dettol-small {
+		background-position: -130px -339px;
+		height: 59px;
+		width: 46px;
+	}
+	&.rb {
+		background-position: -186px -347px;
+		height: 43px;
+		width: 49px;
+	}
+	&.more {
+		background-position: -1px -377px;
+		height: 20px;
+		width: 20px;
+		float: left;
+		margin-right: 10px;
+		margin-top: 2px;
+		&.green {
+			background-position: -30px -377px;
+		}
+	}
+	&.arrow-next {
+		background-position: -76px -380px;
+		height: 13px;
+		width: 7px;
+		float: right;
+		margin-left: 10px;
+		margin-top: 4px;
+	}
+	&.arrow-prev {
+		background-position: -62px -380px;
+		height: 13px;
+		width: 7px;
+		float: left;
+		margin-right: 10px;
+		margin-top: 4px;
+	}
+	&.facebook-color {
+		background-position: -183px -287px;
+		width: 43px;
+		height: 43px
+	}
+	&.twitter-color {
+		background-position: -229px -287px;
+		width: 43px;
+		height: 43px;
+	}
+	&.about-point-collection {
+		background-position: -225px 0px;
+		width: 163px;
+		height: 165px;
+		margin: 0 auto;
+	}
+	&.about-redeem {
+		background-position: -392px 0px;
+		width: 163px;
+		height: 165px;
+		margin: 0 auto;
+	}
+	&.about-auction {
+		background-position: -281px -167px;
+		width: 163px;
+		height: 165px;
+		margin: 0 auto;
+	}
+}
+
+@media(min-width: 768px){
+	.sprites {
+		&.dettol {
+			margin-top: -25px;
+		}
+	}
+
+}
+
+@media(min-width: 992px){
+	.sprites {
+		&.about-point-collection {
+			margin-top: 30%;
+		}
+		&.about-redeem {
+			margin-top: 30%;
+		}
+		&.about-auction {
+			margin-top: 30%;
+		}
+	}
+
+}
