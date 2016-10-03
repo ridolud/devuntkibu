@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: filter Content Template oke
+Template Name: filter Content Template ok
 */
 ?>
 <?php

@@ -68,7 +68,7 @@
   </a>
 </div>
 <div class='container-fluid text-center content white home'>
-  <h2>Selamat datang, Ibu.</h2>
+  <!-- <h2>Selamat datang, Ibu.</h2>
   <p class='subintro'>Yuk, kita simak berbagai tips dan info bermanfaat seputar kebersihan dan perawatan bayi, keluarga, rumah dan diri Ibu. Pilih kategori topik yang bisa dipilih sesuai kebutuhan ibu dan Si Kecil.</p>
   <div class='row'>
     <div class='col-sm-6 col-md-3'>
@@ -91,8 +91,42 @@
       <h4>Bepergian</h4></a>
       <p>Tips persiapan dan perlindungan Si Kecil selama bepergian di luar rumah.</p>
     </div>
+  </div> -->
+  <div class="article-slide">
+    <div class="">
+    <h2>Terbaru</h2>
+    </div>
+
+    <?php
+      $args = array( 'numberposts' => '5' );
+      $post_categories = wp_get_post_categories( $post_id );
+      $cats = array();
+      $recent_posts = wp_get_recent_posts( $args );
+      foreach( $recent_posts as $recent ){
+        $cat = get_category( $c );
+        $cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
+    ?>
+        <div class="home_feature clearfix">
+            <div class="article-grid">
+              <img src="<?php the_field('square_feature_image', $recent["ID"]); ?>" alt="" class="img-responsive">
+            </div>
+            <div class="article-grid">
+              <span class="article-type"><?php echo get_cat_name($recent["$cat_name"]); ?></span>
+              <a href="<?php echo get_permalink($recent["ID"]); ?>"><h4>
+                <?php echo $recent["post_title"] ?>
+              </h4></a>
+              <!-- <span class="article-writer hidden-xs"><?php echo get_the_author_meta( 'display_name', $recent["post_author"]) ?></span> -->
+              <p class="hidden-xs">
+               <a href="<?php get_permalink($recent["ID"]) ?>">Baca Selengkapnya</a>
+              </p>
+            </div>
+        </div>
+    <?php
+      }
+    ?>
   </div>
 </div>
+
 <div class='article'>
   <div class='content'>
     <div class='text-center intro-article'>
