@@ -202,6 +202,13 @@
 
   </div>
 </div>
+<div class="content">
+  <div class="col-md-6">
+    <video autoplay="true" src="www.youtube.com/watch?v=i_dGAIRI8cc">testCon</video>
+  </div>
+  <div class="col-md-6">
+  </div>
+</div>
 <!-- <div id='collect-point'>
   <div class='content bg-white'>
     <div class='col-sm-7'>
