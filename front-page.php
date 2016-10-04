@@ -123,84 +123,64 @@
         </div>
     <?php
       }
+      wp_reset_postdata();
     ?>
   </div>
 </div>
 
-<div class='article'>
-  <div class='content'>
-    <div class='text-center intro-article'>
-      <h1>Cerita inspiratif dari sesama Ibu</h1>
-      <p>untukibu.id juga jadi tempat asyik untuk berbagi pengalaman dan tips sebagai orangtua. Banyak cerita menarik tentang Si Kecil plus tips-tips dari para Ibu lainnya. Foto-foto Si Kecil lagi lucu-lucunya? Bisa lho dibagi di sini berikut cerita di baliknya. Yuk, <i>share</i> cerita Ibu di sini. Dari Ibu, untuk Ibu.</p>
-      <a href="<?php echo get_category_link( 19 ); ?>"><div class='btn btn-default'>Lihat di sini</div></a>
+<div class='article inspirasi'>
+  <div class=" inner-article-area ">
+    <div class="row clearfix p-lr-40 m-b-40" style="">
+      <a class="text-success"><i class="glyphicon glyphicon-pencil" style="font-size:30px;"></i> TULIS CERITA</a>
+      <h2 class="text-center title-block">Inspirasi Ibu</h2>
     </div>
-  </div>
-  <div class="">
-    <div class="article-slideshow">
-      <?php
-        $popularpost = most_popular(null);
 
-        while ( $popularpost->have_posts() ) : $popularpost->the_post();
-          $featured_post_image = (wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'));
-      ?>
-      <div class="article-slide clearfix">
-        <div class="home_feature">
-          <img src="<?php the_field('square_feature_image'); ?>" alt="" class="img-responsive">
-        </div>
-        <div class="article-text">
-          <span class="article-type">terpopuler</span>
-          <a href="<?php echo get_permalink(); ?>"><?php the_title('<h4>', '</h4>'); ?></a>
-          <span class="article-writer hidden-xs"><?php the_author() ?></span>
-          <span class="hidden-xs"><?php the_excerpt(); ?></span>
-        </div>
+    <?php
+      $args = array('posts_per_page' => 4, 'meta_key' => 'wpb_post_views_count', 'order_by' => 'meta_value_num', 'order' => 'ASC');
+      $populerPost = query_posts($args);
+      $populerPostList = array();
+      foreach ( $populerPost as $post ) : setup_postdata( $post );
+        $populerPostList[] += $post->ID;
+      endforeach;
+    ?>
+
+    <div class="row clearfix">
+      <div class="col-sm-7 p-r-10">
+        <div class="post narrow">
+ 		      <div class='white'>
+ 		      	<a href="#"><img src="<?php the_field('square_feature_image', $populerPostList[0]); ?>" alt="" class="img-responsive"></a>
+ 		        <!-- <img class='full-width' src='assets/images/thumb-art.jpg'> -->
+ 		        <div class='subcontent'>
+              <div class='author'>Oleh <?php echo get_the_author($populerPostList[0]); ?></div>
+ 		          <a href="#"><p class='desc'><?php echo get_the_title($populerPostList[0]); ?></p></a>
+              <a href="#">Baca Selengkapnya</a>
+ 		        </div>
+ 		      </div>
+ 			</div>
       </div>
-      <?php endwhile; ?>
-      <?php
-        $feat_post = get_field('this_week_article_from_moms', 8);
-        if( $feat_post ):
+      <div class="col-sm-5 p-l-10">
+          <div class="col-sm-12 no-padding">
+            <div class="col-xs-4 no-padding">
+              <img src="<?php the_field('square_feature_image', $populerPostList[1]); ?>" alt="" class="img-responsive">
+            </div>
+            <div class="col-xs-8 no-padding">
+              <span class="article-type">terbaru</span>
 
-        // override $post
-        $post = $feat_post;
-        setup_postdata( $post );
+              <span class="article-writer hidden-xs"><?php echo get_the_author_meta( 'display_name', $populerPostList[1]["post_author"]) ?></span>
+              <a href="<?php echo get_permalink($populerPostList[1]); ?>"><h4><?php echo get_the_title($populerPostList[1]); ?></h4></a>
+              <a href="#">Baca Selengkapnya</a>
+            </div>
+          </div>
+          <div class="col-sm-12 no-padding">
 
-      ?>
-      <div class="article-slide clearfix">
-        <div class="home_feature">
-          <img src="<?php the_field('square_feature_image'); ?>" alt="" class="img-responsive">
-        </div>
-        <div class="article-text">
-          <span class="article-type">cerita minggu ini</span>
-          <a href="<?php echo get_permalink(); ?>"><?php the_title('<h4>', '</h4>'); ?></a>
-          <span class="article-writer hidden-xs"><?php the_author() ?></span>
-          <span class="hidden-xs"><?php the_excerpt(); ?></span>
-        </div>
+          </div>
+          <div class="col-sm-12 no-padding">
+
+          </div>
       </div>
-      <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-      <?php endif; ?>
-      <?php
-        $args = array( 'numberposts' => '1' );
-        $recent_posts = wp_get_recent_posts( $args );
-        foreach( $recent_posts as $recent ){
-      ?>
-        <div class="article-slide clearfix">
-          <div class="home_feature">
-            <img src="<?php the_field('square_feature_image', $recent["ID"]); ?>" alt="" class="img-responsive">
-          </div>
-          <div class="article-text">
-            <span class="article-type">terbaru</span>
-            <a href="<?php echo get_permalink($recent["ID"]); ?>"><h4>
-              <?php echo $recent["post_title"] ?>
-            </h4></a>
-            <span class="article-writer hidden-xs"><?php echo get_the_author_meta( 'display_name', $recent["post_author"]) ?></span>
-            <p class="hidden-xs">
-             <?php echo get_the_excerpt_by_id($recent["ID"]) ?>
-            </p>
-          </div>
-        </div>
-      <?php
-        }
-      ?>
     </div>
+    <?php wp_reset_postdata(); ?>
+
   </div>
 </div>
 <!-- <div id='collect-point'>

@@ -7925,6 +7925,50 @@ a img.aligncenter {
 
 
       /*CUSTOM CSS*/
+h2{
+font-family: "Helvetica";
+font-weight: 400;
+}
+
+/*padding-margin*/
+.no-padding{
+  padding: 0px ! important;
+}
+.padding-20{
+  padding: 20px ! important;
+}
+.p-l-10{
+  padding-left:10px ! important;
+}
+.p-r-10{
+  padding-right: 10px ! important;
+}
+.p-lr-40{
+  padding-left: 40px !important;
+  padding-left: 40px !important;
+}
+/*====*/
+.no-margin{
+  margin: 0px !important;
+}
+.m-b-40{
+  margin-bottom: 40px ! important;
+}
+.m-t-40{
+  margin-top: 40px ! important;
+}
+/*end padding margin*/
+
+
+.title-block:after{
+content:'';
+width: 20%;
+border-top: 1px solid;
+position: sticky;
+display: block;
+margin: auto;
+/*left: 40%;*/
+}
 
 /*Detol - Header*/
 #dettol-header *{
@@ -7981,6 +8025,7 @@ a img.aligncenter {
 #dettol-header.full-top{
   margin-top: 9px;
   background: #fff;
+  box-shadow: 0 0 20px #999;
   /*border-bottom: 2px solid*/
 }
 #dettol-header.full-top .dettol-menu-header > li > a{
@@ -8095,3 +8140,12 @@ opacity: 1;
   }
 }
 /*end Carousel*/
+
+.inner-article-area{
+  background: rgba(255, 255, 255, 0.5);
+  padding: 40px 50px;
+}
+.inner-article-area h2 {
+  margin-top: -35px;
+  color: #353535;
+}

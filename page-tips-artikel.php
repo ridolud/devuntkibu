@@ -14,13 +14,12 @@
 get_header(); ?>
 <?php
 	$feat_post = get_field('this_week_article_from_moms');
-	if( $feat_post ): 
+	if( $feat_post ):
 
 	// override $post
 	$post = $feat_post;
 	setup_postdata( $post );
 	$featured_post_image = (wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')); 
-
 ?>
 <div class='banner-tips' style="background: URL('<?php echo $featured_post_image[0]; ?>') no-repeat center center fixed">
   <div class='col-md-6'>
@@ -68,7 +67,7 @@ get_header(); ?>
 						'orderby' => 'date',
            	'order'  => 'DESC',
 						'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
-					); 
+					);
 					break;
 				case 'popularity':
 					$args = array(
@@ -95,7 +94,7 @@ get_header(); ?>
 					 'post_type' => 'post',
 					 'posts_per_page' => 5,
 					 'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
-					); 
+					);
 					break;
 			}
 		}
@@ -104,9 +103,9 @@ get_header(); ?>
 			 'post_type' => 'post',
 			 'posts_per_page' => 5,
 			 'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
-			); 
+			);
 		}
-		query_posts($args); 
+		query_posts($args);
 	?>
 		<div class="masonry">
 			<?php
