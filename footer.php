@@ -281,8 +281,10 @@
     <script src='<?php echo get_stylesheet_directory_uri(); ?>/assets/javascripts/bootstrap.min.js'></script>
     <script src='<?php echo get_stylesheet_directory_uri(); ?>/assets/javascripts/placeholder.js'></script>
     <script src='<?php echo get_stylesheet_directory_uri(); ?>/assets/javascripts/classie.js'></script>
+    <script src='<?php echo get_stylesheet_directory_uri(); ?>/assets/javascripts/owl.carousel.js'></script>
     <script src='<?php echo get_stylesheet_directory_uri(); ?>/assets/javascripts/dettol.js'></script>
     <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/javascripts/slick.min.js"></script>
+    
 <?php wp_footer(); ?>
 </body>
 </html>
