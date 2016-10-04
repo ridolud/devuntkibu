@@ -8141,7 +8141,7 @@ opacity: 1;
 }
 /*end Carousel*/
 
-<<<<<<< HEAD
+/*inspirasi ibu*/
 .inner-article-area{
   background: rgba(255, 255, 255, 0.5);
   padding: 40px 50px;
@@ -8149,8 +8149,19 @@ opacity: 1;
 .inner-article-area h2 {
   margin-top: -35px;
   color: #353535;
-
-
+}
+.article-inspirasi-big .subcontent{
+  padding: 20px 30px 30px;
+}
+.article-inspirasi-big .author, .article-inspirasi-big .link-post{
+  font-size: 14px;
+  color: #c1c1c1;
+}
+.article-inspirasi-big .title-post{
+  font-size: 22px;
+  color:#606060;
+}
+/*end inspirasi ibu*/
 
 /*
  *  Owl Carousel - Animate Plugin

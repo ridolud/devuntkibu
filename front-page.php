@@ -144,23 +144,23 @@
     ?>
 
     <div class="row clearfix">
-      <div class="col-sm-7 p-r-10">
+      <div class="col-sm-7 article-inspirasi-big p-r-10">
         <div class="post narrow">
  		      <div class='white'>
  		      	<a href="#"><img src="<?php the_field('square_feature_image', $populerPostList[0]); ?>" alt="" class="img-responsive"></a>
  		        <!-- <img class='full-width' src='assets/images/thumb-art.jpg'> -->
  		        <div class='subcontent'>
               <div class='author'>Oleh <?php echo get_the_author($populerPostList[0]); ?></div>
- 		          <a href="#"><p class='desc'><?php echo get_the_title($populerPostList[0]); ?></p></a>
-              <a href="#">Baca Selengkapnya</a>
+ 		          <a href="#"><h4 class="title-post"><?php echo get_the_title($populerPostList[0]); ?></h4></a>
+              <a href="#" class="link-post text-success">Baca Selengkapnya</a>
  		        </div>
  		      </div>
  			</div>
       </div>
       <div class="col-sm-5 p-l-10">
-          <div class="col-sm-12 no-padding">
+          <div class="col-sm-12 no-padding" style="margin-bottom:20px; in-height:130px;background:#fff;">
             <div class="col-xs-4 no-padding">
-              <img src="<?php the_field('square_feature_image', $populerPostList[1]); ?>" alt="" class="img-responsive">
+              <img src="<?php the_field('square_feature_image', $populerPostList[1]); ?>" alt="" class="img-responsive" style="min-height:130px;">
             </div>
             <div class="col-xs-8 no-padding">
               <span class="article-type">terbaru</span>
@@ -170,11 +170,31 @@
               <a href="#">Baca Selengkapnya</a>
             </div>
           </div>
-          <div class="col-sm-12 no-padding">
 
+          <div class="col-sm-12 no-padding" style="margin-bottom:20px; in-height:130px;background:#fff;">
+            <div class="col-xs-4 no-padding">
+              <img src="<?php the_field('square_feature_image', $populerPostList[2]); ?>" alt="" class="img-responsive" style="min-height:130px;">
+            </div>
+            <div class="col-xs-8 no-padding">
+              <span class="article-type">terbaru</span>
+
+              <span class="article-writer hidden-xs"><?php echo get_the_author_meta( 'display_name', $populerPostList[2]["post_author"]) ?></span>
+              <a href="<?php echo get_permalink($populerPostList[2]); ?>"><h4><?php echo get_the_title($populerPostList[2]); ?></h4></a>
+              <a href="#">Baca Selengkapnya</a>
+            </div>
           </div>
-          <div class="col-sm-12 no-padding">
 
+          <div class="col-sm-12 no-padding" style="margin-bottom:20px; in-height:130px;background:#fff;">
+            <div class="col-xs-4 no-padding">
+              <img src="<?php the_field('square_feature_image', $populerPostList[3]); ?>" alt="" class="img-responsive" style="min-height:130px;">
+            </div>
+            <div class="col-xs-8 no-padding">
+              <span class="article-type">terbaru</span>
+
+              <span class="article-writer hidden-xs"><?php echo get_the_author_meta( 'display_name', $populerPostList[3]["post_author"]) ?></span>
+              <a href="<?php echo get_permalink($populerPostList[3]); ?>"><h4><?php echo get_the_title($populerPostList[3]); ?></h4></a>
+              <a href="#">Baca Selengkapnya</a>
+            </div>
           </div>
       </div>
     </div>
