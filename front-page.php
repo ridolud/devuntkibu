@@ -92,13 +92,12 @@
       <p>Tips persiapan dan perlindungan Si Kecil selama bepergian di luar rumah.</p>
     </div>
   </div> -->
-  <div class="article-slide">
-    <div class="">
+  <div class="content">
+    <div class="text-center">
     <h2>Terbaru</h2>
     </div>
-
     <?php
-      $args = array( 'numberposts' => '5' );
+      $args = array( 'numberposts' => '8' );
       $post_categories = wp_get_post_categories( $post_id );
       $cats = array();
       $recent_posts = wp_get_recent_posts( $args );
@@ -106,12 +105,12 @@
         $cat = get_category( $c );
         $cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
     ?>
-        <div class="home_feature clearfix">
+        <div class="col-sm-3 product">
             <div class="article-grid">
-              <img src="<?php the_field('square_feature_image', $recent["ID"]); ?>" alt="" class="img-responsive">
+              <img src="<?php the_field('square_feature_image', $recent["ID"]); ?>" alt="" class="img-thumbnail">
             </div>
             <div class="article-grid">
-              <span class="article-type"><?php echo get_cat_name($recent["$cat_name"]); ?></span>
+              <span class="article-type"><?php echo $recent["cat_name"]; ?></span>
               <a href="<?php echo get_permalink($recent["ID"]); ?>"><h4>
                 <?php echo $recent["post_title"] ?>
               </h4></a>

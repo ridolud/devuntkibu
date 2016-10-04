@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
 Template Name: Loyalty Program Template
 */
 ?>
@@ -76,7 +76,7 @@ Template Name: Loyalty Program Template
         <p style="margin-bottom: 25px;">Website Untuk Ibu ini adalah persembahan Dettol bagi para ibu untuk mendapatkan tips.</p>
         </div>
         <div class="clearfix"></div>
-        <?php if ( !is_user_logged_in() ) { ?> 
+        <?php if ( !is_user_logged_in() ) { ?>
           <a href="#" class="unduh" data-toggle="modal" data-target="#login">
             ikut sekarang
           </a>

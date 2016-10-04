@@ -1,3 +1,10 @@
+ $(document).ready(function() {
+
+$("#owl").owlCarousel();
+
+});
+
+
 jQuery(function() {
   jQuery('input, textarea').placeholder();
 });
