@@ -7976,6 +7976,7 @@ font-weight: 400;
 }
 .title-block{
   font-weight: bold;
+  color: #353535;
 }
 .title-block:after{
 content:'';
@@ -7984,7 +7985,13 @@ border-top: 1px solid;
 position: sticky;
 display: block;
 margin: auto;
-/*left: 40%;*/
+}
+.title-block-left:after{
+content:'';
+width: 200px;
+border-top: 1px solid;
+position: sticky;
+display: block;
 }
 
 /*Detol - Header*/
@@ -8178,7 +8185,7 @@ opacity: 1;
 }
 .inner-article-area h2 {
   /*margin-top: -35px;*/
-  color: #353535;
+  /*color: #353535;*/
 }
 /*.inspirasi-img{
 

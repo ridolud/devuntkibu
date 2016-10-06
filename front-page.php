@@ -127,7 +127,7 @@
   </div>
 </div>
 
-<div class='article inspirasi'>
+<div class=' article inspirasi'>
   <div class=" inner-article-area ">
     <div class="row clearfix p-lr-50 m-b-40" style="">
       <a href="#" class="text-success hidden-xs" style="position:absolute;line-height:36px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/edit.svg" height="36" alt="" /> TULIS CERITA</a>
@@ -142,7 +142,6 @@
         $populerPostList[] += $post->ID;
       endforeach;
     ?>
-    <div class="row">
       <div class="col-sm-7 p-r-5 p-l-5 m-b-10">
           <a href="<?php echo get_permalink($populerPostList[0]) ?>"><div class="inspirasi-img" style="
           background-color:#fff;
@@ -226,16 +225,43 @@
           <a href="#" class="btn btn-success" style="width:220px; border-radius:1px;">CERITA LAINYA ></a>
         </div>
       </div>
-    </div>
+      <div class="clearfix">
+
+      </div>
     <?php wp_reset_postdata(); ?>
 
   </div>
 </div>
-<div class="content">
+<div class="container-fluid content white home">
   <div class="col-md-6">
-    <!-- <video autoplay="true" src="www.youtube.com/watch?v=i_dGAIRI8cc">testCon</video> -->
+    <h2 class="title-block-left">Untuk Keluarga Dettol</h2>
+    <!-- <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/dyrC_bYIY3I" frameborder="0" allowfullscreen> -->
+    <object height="400" style="width:100%;" data="http://www.youtube.com/v/dyrC_bYIY3I?controls=0&start=0">
+    </object>
   </div>
   <div class="col-md-6">
+    <h2 class="title-block-left">Aktivitas</h2>
+    <p>
+      Unduh dan cetak beragam aktivitas bersama si kecil di siini.
+    </p>
+    <div class="col-xs-4 no-padding">
+      <a href="#" class="thumbnail">
+      <img min-height="150" src="http://localhost:8888/wp-content/uploads/2015/10/Sayuran-Puzzle_cover1.jpg" alt="...">
+    </a>
+    </div>
+    <div class="col-xs-4 no-padding">
+      <a href="#" class="thumbnail">
+      <img min-height="150" src="http://localhost:8888/wp-content/uploads/2015/10/Sayuran-Puzzle_cover1.jpg" alt="...">
+    </a>
+    </div>
+    <div class="col-xs-4 no-padding">
+      <a href="#" class="thumbnail">
+      <img min-height="150" src="http://localhost:8888/wp-content/uploads/2016/02/cover1.jpg" alt="...">
+    </a>
+    </div>
+    <div class="col-xs-12 no-padding text-right">
+      <a href="#" class="btn btn-success" style="width:220px; border-radius:1px;">AKTIVITAS LAINNYA ></a>
+    </div>
   </div>
 </div>
 <!-- <div id='collect-point'>
