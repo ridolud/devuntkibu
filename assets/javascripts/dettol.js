@@ -109,7 +109,7 @@ jQuery(document).ready(function($) {
 
       var owl = $(".carousel-post");
 
-      owl.owlCarousel({
+      owl.owlCarousel({ 
         // stagePadding: 20,
         loop:true,
         margin:10,

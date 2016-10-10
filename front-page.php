@@ -67,45 +67,6 @@
   <i class="glyphicon glyphicon-chevron-right"></i>
   </a>
 </div>
-<!-- <div class='content white'>
-  <div class="text-center">
-  <h2>Terbaru</h2>
-  </div>
-  <div class="product" style="margin:0px 60px;">
-
-    <?php
-      $args = array( 'numberposts' => '8' );
-      $post_categories = wp_get_post_categories( $post_id );
-      $cats = array();
-      $recent_posts = wp_get_recent_posts( $args );
-      foreach( $recent_posts as $recent ){
-        $cat = get_category( $c );
-        $cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
-    ?>
-        <div class="col-xs-3 item">
-            <div class="article-grid">
-              <img src="<?php the_field('square_feature_image', $recent["ID"]); ?>" alt="" class="img-thumbnail">
-            </div>
-            <div class="article-grid">
-              <span class="article-type"><?php echo $recent["cat_name"]; ?></span>
-              <a href="<?php echo get_permalink($recent["ID"]); ?>"><h4>
-                <?php echo $recent["post_title"] ?>
-              </h4></a>
-              <span class="article-writer hidden-xs"><?php echo get_the_author_meta( 'display_name', $recent["post_author"]) ?></span>
-              <p class="hidden-xs">
-               <a href="<?php echo get_permalink($recent["ID"]) ?>">Baca Selengkapnya</a>
-              </p>
-            </div>
-        </div>
-    <?php
-      }
-      wp_reset_postdata();
-    ?>
-  </div>
-  <div class="customNavigation">
-
-</div>
-</div> -->
 <div class="content">
   <div class="container">
     <div class="col-sm-12 carousel-post">
