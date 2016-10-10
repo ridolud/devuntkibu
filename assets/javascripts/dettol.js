@@ -97,7 +97,7 @@ function fbShare(url, title, descr, image, winWidth, winHeight) {
   closeBttn.addEventListener( 'click', toggleOverlay );
 })();
 jQuery(document).ready(function($) {
-  $("#owl").owlCarousel();
+  // $("#owl").owlCarousel();
   $( window ).scroll(function () {
      var sc = $(window).scrollTop()
     if (sc > 100) {
