@@ -67,7 +67,7 @@
   <i class="glyphicon glyphicon-chevron-right"></i>
   </a>
 </div>
-<div class='container-fluid text-center content white home'>
+<div class='content white'>
   <!-- <h2>Selamat datang, Ibu.</h2>
   <p class='subintro'>Yuk, kita simak berbagai tips dan info bermanfaat seputar kebersihan dan perawatan bayi, keluarga, rumah dan diri Ibu. Pilih kategori topik yang bisa dipilih sesuai kebutuhan ibu dan Si Kecil.</p>
   <div class='row'>
@@ -92,10 +92,11 @@
       <p>Tips persiapan dan perlindungan Si Kecil selama bepergian di luar rumah.</p>
     </div>
   </div> -->
-  <div class="content">
-    <div class="text-center">
-    <h2>Terbaru</h2>
-    </div>
+  <div class="text-center">
+  <h2>Terbaru</h2>
+  </div>
+  <div class="product">
+
     <?php
       $args = array( 'numberposts' => '8' );
       $post_categories = wp_get_post_categories( $post_id );
@@ -105,7 +106,7 @@
         $cat = get_category( $c );
         $cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
     ?>
-        <div class="col-sm-3 product">
+        <div class="col-lg-3 col-lg-offset-1 ">
             <div class="article-grid">
               <img src="<?php the_field('square_feature_image', $recent["ID"]); ?>" alt="" class="img-thumbnail">
             </div>
@@ -116,7 +117,7 @@
               </h4></a>
               <!-- <span class="article-writer hidden-xs"><?php echo get_the_author_meta( 'display_name', $recent["post_author"]) ?></span> -->
               <p class="hidden-xs">
-               <a href="<?php get_permalink($recent["ID"]) ?>">Baca Selengkapnya</a>
+               <a href="<?php echo get_permalink($recent["ID"]) ?>">Baca Selengkapnya</a>
               </p>
             </div>
         </div>
