@@ -9,6 +9,138 @@
 ?>
 
     <footer>
+      <div class='content'>
+        <div class='col-md-2 col-sm-6'>
+          <ul>
+            <li>
+              <a href='<?php echo site_url(); ?>'>Beranda</a>
+            </li>
+            <?php if ( !is_user_logged_in() ) { ?>
+              <li>
+                <a href='#' data-toggle="modal" data-target="#login">Member Login</a>
+              </li>
+              <li>
+                <a href='#' data-toggle="modal" data-target="#login">Daftar</a>
+              </li>
+            <?php } ?>
+            <li>
+              <a href='<?php echo esc_url( get_permalink( get_page_by_title( 'Hubungi Kami' ) ) ); ?>'>Hubungi Kami</a>
+            </li>
+          </ul>
+        </div>
+        <div class='col-md-2 col-sm-6'>
+          <ul>
+            <li>
+              <a href='<?php echo get_permalink(8); ?>'>Tips & Artikel</a>
+            </li>
+            <li>
+              <a href='<?php echo get_category_link( 19 ); ?>'>Artikel dari Ibu</a>
+            </li>
+            <li>
+              <a href='<?php echo get_category_link( 3 ); ?> '>Kebersihan Si Kecil</a>
+            </li>
+            <li>
+              <a href='<?php echo get_category_link( 4 ); ?> '>Kebersihan Ibu</a>
+            </li>
+            <li>
+              <a href='<?php echo get_category_link( 10 ); ?> '>Kebersihan Rumah</a>
+            </li>
+            <li>
+              <a href='<?php echo get_category_link( 11 ); ?>'>Bepergian</a>
+            </li>
+          </ul>
+        </div>
+        <div class='col-md-2 col-sm-6 col-unduh padding_right_none'>
+          <ul>
+            <li>
+              <a href='<?php echo get_permalink(2086) ?>'>Unduh</a>
+            </li>
+<!--             <li>
+              <a href='#'>Tabel Berat Bayi</a>
+            </li>
+            <li>
+              <a href='#'>Set kartu Alfabet</a>
+            </li>
+            <li>
+              <a href='#'>Daftar Perlengkapan Traveling</a>
+            </li>
+            <li>
+              <a href='#'>Banyak lainnya</a>
+            </li> -->
+          </ul>
+        </div>
+        <!-- <div class='col-md-2 col-sm-6'>
+          <ul>
+            <li>
+              <a href='<?php echo get_permalink(2074);?>'>Rejeki Keluarga Sehat</a>
+            </li>
+            <li>
+              <a href='<?php echo get_permalink(39);?>'>Tentang Promo</a>
+            </li>
+            <li>
+              <a href='#'>Kumpulkan Poin</a>
+            </li>
+            <li>
+              <a href='#'>Tukar Poin</a>
+            </li>
+            <li>
+              <a href='#'>Lelang Online</a>
+            </li>
+            <li>
+              <a href='<?php echo get_permalink(1993); ?>'>Pertanyaan/FAQ</a>
+            </li>
+          </ul>
+        </div> -->
+        <div class='col-md-2 col-sm-6'>
+          <ul>
+            <li>
+              <a href='http://www.dettol.co.id/products' target="_blank">Produk</a>
+            </li>
+          </ul>
+        </div>
+        <div class='col-md-2 col-sm-6 col-socmed padding_none'>
+          <ul class="follow_us">
+            <li>
+              <a href='#'>Ikuti kami di:</a>
+            </li>
+          </ul>
+          <ul class='socmed'>
+            <li>
+              <a href='http://dettol.co.id' target="_blank">
+                <div class='sprites web'></div>
+              </a>
+            </li>
+            <li>
+              <a href='https://www.facebook.com/DettolIndonesia' target="_blank">
+                <div class='sprites facebook'></div>
+              </a>
+            </li>
+            <li>
+              <a href='https://www.twitter.com/Dettol_ID' target="_blank">
+                <div class='sprites twitter'></div>
+              </a>
+            </li>
+            <li>
+              <a href='https://www.youtube.com/user/dettolid' target="_blank">
+                <div class='sprites youtube'></div>
+              </a>
+            </li>
+          </ul>
+          <div class='clearfix'></div>
+          <ul class="terms">
+            <li>
+              <a style="font-weight:300; font-size: 14px;" href='<?php echo get_permalink(2158); ?>'>Syarat & Ketentuan</a>
+            </li>
+            <li>
+              <a href='<?php echo esc_url( get_permalink( get_page_by_title( 'Kebijakan Privasi' ) ) ); ?>'>Kebijakan Privasi</a>
+            </li>
+            <!-- <li>
+              <a href='#'>Peta situs</a>
+            </li> -->
+          </ul>
+        </div>
+        <div class='clearfix'></div>
+      </div>
     </footer>
     <div class='footer-white'>
       <div class='col-sm-3 col-xs-12 col-lg-2'>

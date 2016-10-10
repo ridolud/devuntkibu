@@ -264,6 +264,15 @@
     </div>
   </div>
 </div>
+<div class="bottom-quote">
+  <div class="container-fluid content m-t-40 m-b-40">
+    <div class="col-sm-7">
+      <h2 class="tittle-block">Untuk Ibu, persembahan Dettol.</h2>
+      <p style="font-size:18px;">Pengalaman indah penuh kasih terbentang di depan mata dan tugas mulia sebagai Ibu kini telah dimulai. Bersama Dettol, tugas ibu menjaga kebersihan dan kesehatan Si Kecil akan lebih mudah dan nyaman.</p>
+    </div>
+  </div>
+</div>
+
 <!-- <div id='collect-point'>
   <div class='content bg-white'>
     <div class='col-sm-7'>

@@ -5763,8 +5763,8 @@ button.close {
     margin-top: -15px;
   }
   .sprites.rb {
-    background-position: -186px -347px;
-    height: 43px;
+    background-position: -187px -342px;
+    height: 50px;
     width: 49px; }
   .sprites.more {
     background-position: -1px -377px;
@@ -7928,6 +7928,7 @@ a img.aligncenter {
 h2{
 font-family: "Helvetica";
 font-weight: 400;
+color: #353535;
 }
 
 /*padding-margin*/
@@ -8208,6 +8209,21 @@ opacity: 1;
   color:#606060;
 }
 /*end inspirasi ibu*/
+
+/*footer*/
+footer{
+  min-height: 60px;
+}
+.bottom-quote{
+  background: url('http://localhost:8888/wp-content/uploads/2015/12/Header-gray.jpg') center left;
+  display: inline-flex;
+  background-color: #c8c8c8;
+  background-repeat: no-repeat;
+  background-size: 51%;
+  background-position: right 57%;
+
+}
+/*end footer*/
 
 /*
  *  Owl Carousel - Animate Plugin
