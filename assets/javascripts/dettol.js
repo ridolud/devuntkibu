@@ -97,13 +97,34 @@ function fbShare(url, title, descr, image, winWidth, winHeight) {
   closeBttn.addEventListener( 'click', toggleOverlay );
 })();
 jQuery(document).ready(function($) {
-  // $("#owl").owlCarousel();
-  $( window ).scroll(function () {
-     var sc = $(window).scrollTop()
-    if (sc > 100) {
+    $( window ).scroll(function () {
+      var sc = $(window).scrollTop()
+      if (sc > 100) {
         $("#dettol-header").addClass("full-top")
-    } else {
+      } else {
         $("#dettol-header").removeClass("full-top")
-    }
-  });
+      }
+    });
+
+
+      var owl = $(".carousel-post");
+
+      owl.owlCarousel({ 
+        // stagePadding: 20,
+        loop:true,
+        margin:10,
+        items:4,
+        lazyLoad: true,
+        nav:true,
+        navText: [
+          '<span class="glyphicon glyphicon-chevron-left" arial-hidden="true"></span>',
+          '<span class="glyphicon glyphicon-chevron-right" arial-hidden="true"></span>'
+        ],
+      });
+      $(".next").click(function(){
+          $('.owl-next').trigger('click');
+      })
+      $(".prev").click(function(){
+        $('.owl-prev').trigger('click');
+      })
 });
