@@ -68,7 +68,10 @@
   </a>
 </div>
 <div class="content">
-  <div class="container">
+  <div class="container m-b-40 m-t-40">
+    <div class="col-sm-12">
+      <h2 class="text-center no-margin title-block m-b-40">Inspirasi Ibu</h2>
+    </div>
     <div class="col-sm-12 carousel-post">
       <?php
         $args = array( 'numberposts' => '8' );
