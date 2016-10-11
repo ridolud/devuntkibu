@@ -84,7 +84,7 @@
       ?>
       <div class="post narrow">
          <div class='white'>
-           <a href="<?php echo get_permalink($recent["ID"]); ?>"><img src="<?php the_field('square_feature_image',$recent["ID"]); ?>" height="300"/></a>
+           <a href="<?php echo get_permalink($recent["ID"]); ?>"><img src="<?php the_field('square_feature_image',$recent["ID"]); ?>" height="250"/></a>
            <!-- <img class='full-width' src='assets/images/thumb-art.jpg'> -->
            <div class='subcontent'>
              <div class="author">Keluarga</div>
