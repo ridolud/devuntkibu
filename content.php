@@ -12,7 +12,7 @@
 
     <?php the_category();?>
 
-    <h1 class="article-tittle" style="">Tips membersikan kamar bayi</h1>
+    <h1 class="article-tittle" style=""><?php the_title(); ?></h1>
 
     <?php the_content(); ?>
 

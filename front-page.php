@@ -67,8 +67,8 @@
   <i class="glyphicon glyphicon-chevron-right"></i>
   </a>
 </div>
-<div class="content">
-  <div class="container m-b-40 m-t-40">
+<div class="content white">
+  <div class="container m-b-40 m-t-40 ">
     <div class="col-sm-12">
       <h2 class="text-center no-margin title-block m-b-40">Inspirasi Ibu</h2>
     </div>
