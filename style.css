@@ -7998,6 +7998,7 @@ a img.aligncenter {
 .owl-carousel .owl-stage-outer {
   position: relative;
   overflow: hidden;
+  padding-bottom: 20px;
   /* fix for flashing background */
   -webkit-transform: translate3d(0px, 0px, 0px);
 }
@@ -8029,6 +8030,9 @@ a img.aligncenter {
   position: relative;
   min-height: 1px;
   float: left;
+  -webkit-box-shadow: 0px 14px 14px -8px #999;
+  -moz-box-shadow: 0px 14px 14px -8px #999;
+  box-shadow: 0px 14px 14px -8px #999;
   -webkit-backface-visibility: hidden;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -8495,6 +8499,9 @@ margin-top: 11px;
 margin-left: -210px;
 background: #fff;
 border-color: transparent transparent #56af45 #56af47;
+}
+#article-page .inner{
+  min-height: 140px;
 }
 /*end article*/
 
