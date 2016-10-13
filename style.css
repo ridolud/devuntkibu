@@ -8277,6 +8277,7 @@ display: block;
 #dettol-header.full-top .dettol-menu-header > li > a{
   color: #888;
 }
+.search-live-field{padding: 3px 0px 3px;}
 @media(min-width: 992px) and (max-width: 1200px){
   .navbar .container-fluid {
     padding-right: 30px;

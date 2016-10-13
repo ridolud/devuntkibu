@@ -106,10 +106,16 @@ jQuery(document).ready(function($) {
       }
     });
 
+    $('.search-bar').click(function() {
+      $('.search-input').show();
+    })
+    $('.search-input').focusout(function(){
+      $(this).hide();
+    })
 
       var owl = $(".carousel-post");
 
-      owl.owlCarousel({ 
+      owl.owlCarousel({
         // stagePadding: 20,
         loop:true,
         margin:10,

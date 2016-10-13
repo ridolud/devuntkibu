@@ -46,7 +46,10 @@
               </a>
             </li> -->
 						<li class="search-bar">
-							<a href="#"><i class="glyphicon glyphicon-search"></i></a>
+							<a><i class="glyphicon glyphicon-search"></i></a>
+						</li>
+						<li class="search-input" style="display:none;">
+							<?php get_search_form(); ?>
 						</li>
             <?php if ( !is_user_logged_in() ) { ?>
               <li>
