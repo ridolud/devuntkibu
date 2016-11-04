@@ -8470,6 +8470,13 @@ opacity: 1;
   color:#606060;
   font-weight:400;
 }
+
+#article-page .article-content img.alignleft{
+  margin-left:-30%;
+}
+#article-page .article-content img.alignright{
+  margin-right:-30%;
+}
 #article-page .article-content .article-tag{
   background:#e6e6e6;
   padding:5px 10px;

@@ -84,7 +84,13 @@
       ?>
       <div class="post narrow">
          <div class='white'>
-           <a href="<?php echo get_permalink($recent["ID"]); ?>"><img src="<?php the_field('square_feature_image',$recent["ID"]); ?>" height="250"/></a>
+           <a href="<?php echo get_permalink($recent["ID"]); ?>">
+             <div style="
+                background:url(<?php the_field('square_feature_image',$recent["ID"]); ?>) no-repeat center center;
+                background-size: cover;
+                height:250px;
+             "></div>
+           </a>
            <!-- <img class='full-width' src='assets/images/thumb-art.jpg'> -->
            <div class='subcontent'>
              <div class="author">Keluarga</div>
@@ -217,7 +223,50 @@
     <p>
       Unduh dan cetak beragam aktivitas bersama si kecil di siini.
     </p>
+    <?php
+    $args = array(
+      'post_status' => 'publish',
+      'post_type' => 'download',
+      'posts_per_page' => 3,
+      'meta_key' => 'download_featured',
+      'orderby' => 'meta_value_num',
+      'order'  => 'DESC',
+            );
+    $downloadPost = new WP_Query($args);
+    while ( $downloadPost->have_posts() ) : $downloadPost->the_post();
+    ?>
     <div class="col-xs-4 no-padding">
+      <a data-toggle="modal" data-target="#modal_<?php echo get_the_ID(); ?>" class="thumbnail">
+      <img min-height="150" src="<?php the_field('splash_picture');?>" alt="...">
+    </a>
+    <div class="modal fade modal_download" id="modal_<?php echo get_the_ID(); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="col-md-8 padding_none">
+              <img class='full-width' src="<?php the_field('splash_picture'); ?>">
+            </div>
+            <div class="col-md-4 padding_none">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <div class="download_detail">
+                <p>Detail Unduh</p>
+                <?php the_title('<h4>', '</h4>') ?>
+                <?php the_content(); ?>
+                <a href="<?php the_field('downloadable_file'); ?>" data-field-key='<?php echo get_field_object('counter_download')['key']; ?>' data-post-id='<?php echo get_the_ID(); ?>' class="btn btn-success" download>Unduh & Cetak</a>
+              </div>
+        </div>
+        <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <?php
+    endwhile;
+    wp_reset_query();
+    ?>
+    <!-- <div class="col-xs-4 no-padding">
       <a href="#" class="thumbnail">
       <img min-height="150" src="http://localhost:8888/wp-content/uploads/2015/10/Sayuran-Puzzle_cover1.jpg" alt="...">
     </a>
@@ -231,7 +280,7 @@
       <a href="#" class="thumbnail">
       <img min-height="150" src="http://localhost:8888/wp-content/uploads/2016/02/cover1.jpg" alt="...">
     </a>
-    </div>
+    </div> -->
     <div class="col-xs-12 no-padding text-right">
       <a href="#" class="btn btn-success" style="width:220px; border-radius:1px;">AKTIVITAS LAINNYA ></a>
     </div>
