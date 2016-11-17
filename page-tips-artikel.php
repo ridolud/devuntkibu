@@ -19,9 +19,18 @@ get_header(); ?>
 	// override $post
 	$post = $feat_post;
 	setup_postdata( $post );
-	$featured_post_image = (wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')); 
+	$featured_post_image = (wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'));
 ?>
-<div class='banner-tips' style="background: URL('<?php echo $featured_post_image[0]; ?>') no-repeat center center fixed">
+<div class="sub-header">
+	<div class="container">
+        <ul class="nav navbar-nav">
+					<li><a href="#">Category1 <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+					<li><a href="#">Category2 <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+					<li><a href="#">Category3 <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+      	</ul>
+	</div>
+</div>
+<!-- <div class='banner-tips' style="background: URL('<?php echo $featured_post_image[0]; ?>') no-repeat center center fixed">
   <div class='col-md-6'>
     <div class='content'>
       <div class='weekly'>Artikel Minggu Ini dari Ibu</div>
@@ -35,7 +44,7 @@ get_header(); ?>
     </div>
   </div>
   <div class='clearfix'></div>
-</div>
+</div> -->
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif; ?>
 <div class ="artikel col-md-12">

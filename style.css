@@ -8277,6 +8277,32 @@ display: block;
 #dettol-header.full-top .dettol-menu-header > li > a{
   color: #888;
 }
+#dettol-header .search-input label{
+  margin-bottom: 0px;
+}
+#dettol-header .search-input input{
+  line-height: 28px;
+}
+.sub-header{
+  padding-top: 100px;
+}
+.sub-header .nav > li > a{
+  font-size: 14pt;
+  line-height: 24pt;
+  padding: 20px 30px;
+  color: #4d4d4d;
+}
+.sub-header .nav > li > a:hover{
+  background-color: transparent;
+  color: #97e241;
+}
+.sub-header .navbar-nav{
+  display: inline-block;
+  float: none;
+}
+.sub-header .container{
+  text-align: center;
+}
 .search-live-field{padding: 3px 0px 3px;}
 @media(min-width: 992px) and (max-width: 1200px){
   .navbar .container-fluid {
