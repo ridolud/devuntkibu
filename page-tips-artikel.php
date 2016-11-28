@@ -47,8 +47,35 @@ get_header(); ?>
 </div> -->
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif; ?>
-<div class ="artikel col-md-12">
+<div class ="artikel bg-white">
+
+	<div class="container p-l-30 p-r-30 ">
+		<div class="row no-margin m-t-20 b-t-20 full-height">
+			<div class="col-md-12 m-b-20 b-a b-success padding-10 text-center">
+				<h4>KEBERSIHAN SIKECIL</h4>
+				<p>
+					"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+				</p>
+			</div>
+			<div class="col-sm-6 no-padding">
+				<a href="#" class="thumbnail no-padding">
+      		<img src="<?php echo $featured_post_image[0]; ?>" alt="">
+    		</a>
+			</div>
+			<div class="col-sm-6">
+				<p>KEBERSIHAN SIKECIL</p>
+				<h1>Lindungi Keluarga Ibu dari Serangan Flu dan Batuk</h1>
+				<p><span><?php the_author(); ?></span> - <span>{ex: 2 days ago}</span></p>
+				<p><?php the_excerpt(); ?> <a href="#" class="text-success">Baca Selengakapnya</a></p>
+				<p></p>
+			</div>
+		</div>
+	</div>
+
 	<div class="content">
+
+
+
 		<div class="filters col-md-9 padding_none hidden-xs hidden-sm">
 			<?php wp_nav_menu(array(
 			    'theme_location' => 'artikel_tips_filter',
