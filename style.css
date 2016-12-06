@@ -8012,6 +8012,7 @@ a img.aligncenter {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
 }
 .owl-carousel.owl-loaded {
   display: block;
@@ -8975,19 +8976,28 @@ display: block;
 .owl-controls{
   position: absolute;
   top:35%;
-  right: -20px;
+  right: 0;
+  width: 100%;
 }
 .owl-controls .owl-prev, .owl-controls .owl-next{
-  background: #25B936;
-  color: #fff;
-  padding: 10px;
-  margin: 5px 0px;
+  color: #25B936;
+  padding: 10px ;
+  font-size: 2.5em;
+  position: absolute;
+}
+.owl-controls .owl-prev{
+  left: -30px;
+  right: auto;
+}
+.owl-controls .owl-next{
+  left: auto;
+  right: -30px;
 }
 .carousel{
   border-bottom: 5px solid #56af45;
 }
 .carousel .inner-caption{
-  background: #fff;
+  /*background: #fff;*/
   color: #616161;
   text-align: left;
   float:right;

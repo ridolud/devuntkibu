@@ -39,9 +39,11 @@
           <div class='item <?php echo $i == 0  ? "active" : "" ?>' style=" background:url('<?php the_sub_field('image'); ?>') no-repeat center center; background-size: cover;">
             <div class='carousel-caption'>
               <div class='inner-caption'>
-              <h1><?php the_sub_field('title'); ?></h1>
-              <p><?php the_sub_field('subtitle'); ?></p>
+              <h1 class="bg-white padding-15" style="margin-bottom:0px;"><?php the_sub_field('title'); ?></h1>
+              <!-- <p><?php the_sub_field('subtitle'); ?></p> -->
+              <a href="<?php the_sub_field('title'); ?>" class="btn btn-success">BACA SELENGKAPNYA</a>
               </div>
+
             </div>
           </div>
     <?php
@@ -70,7 +72,7 @@
 <div class="content white">
   <div class="container m-b-40 m-t-40 ">
     <div class="col-sm-12">
-      <h2 class="text-center no-margin title-block m-b-40">Inspirasi Ibu</h2>
+      <h2 class="text-center no-margin title-block m-b-40">Terbaru</h2>
     </div>
     <div class="col-sm-12 carousel-post">
       <?php
@@ -108,9 +110,9 @@
 </div>
 <div class=' article inspirasi'>
   <div class=" inner-article-area ">
-    <div class="row clearfix p-lr-50 m-b-40" style="">
-      <a href="#" class="text-success hidden-xs" style="position:absolute;line-height:36px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/edit.svg" height="36" alt="" /> TULIS CERITA</a>
-      <h2 class="text-center no-margin title-block">Inspirasi Ibu</h2>
+    <div class="row clearfix text-center p-lr-50 m-b-40" style="" >
+      <h2 class=" no-margin title-block">Inspirasi Ibu</h2>
+      <a href="#" class="btn btn-info hidden-xs p-l-15 p-r-15 m-t-20" style="font-size:22px;border-radius:10px"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/edit.svg" height="32" alt="" /> TULIS CERITA IBU DISINI</a>
     </div>
 
     <?php
