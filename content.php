@@ -15,7 +15,8 @@
     <h1 class="article-tittle" style=""><?php the_title(); ?></h1>
 
     <?php the_content(); ?>
-
+  </div>
+  <div class="container content article-content">
     <p>
 
     <?php
