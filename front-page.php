@@ -70,7 +70,7 @@
 <div class="content white">
   <div class="container m-b-40 m-t-40 ">
     <div class="col-sm-12">
-      <h2 class="text-center no-margin title-block m-b-40">Inspirasi Ibu</h2>
+      <h2 class="text-center no-margin title-block m-b-40">Terbaru</h2>
     </div>
     <div class="col-sm-12 carousel-post">
       <?php
@@ -87,23 +87,23 @@
            <a href="<?php echo get_permalink($recent["ID"]); ?>"><img src="<?php the_field('square_feature_image',$recent["ID"]); ?>" height="250"/></a>
            <!-- <img class='full-width' src='assets/images/thumb-art.jpg'> -->
            <div class='subcontent'>
-             <div class="author">Keluarga</div>
+             <div class="author"><?php echo get_cat_name(wp_get_post_categories($recent["ID"])[0]); ?></div>
              <a href="<?php echo get_permalink($recent["ID"]); ?>"><h4 class="title-post"><?php echo $recent["post_title"] ?></h4></a>
              <a href="#" class="text-success link-post">Baca Selengkapnya</a>
            </div>
          </div>
      </div>
       <?php
-        }
+      }
         wp_reset_postdata();
       ?>
     </div>
   </div>
 </div>
-<div class=' article inspirasi'>
+<div class='article inspirasi'>
   <div class=" inner-article-area ">
     <div class="row clearfix p-lr-50 m-b-40" style="">
-      <a href="#" class="text-success hidden-xs" style="position:absolute;line-height:36px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/edit.svg" height="36" alt="" /> TULIS CERITA</a>
+      <a href="/wp-admin/post-new.php" class="text-success hidden-xs" style="position:absolute;line-height:36px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/edit.svg" height="36" alt="" /> TULIS CERITA</a>
       <h2 class="text-center no-margin title-block">Inspirasi Ibu</h2>
     </div>
 
@@ -194,8 +194,8 @@
             <a href="<?php echo get_permalink($populerPostList[3]) ?>" class="text-success link-post">Baca Selengkapnya</a>
           </div>
         </div>
-        <div class="col-xs-12 no-padding text-right">
-          <a href="#" class="btn btn-success" style="width:220px; border-radius:1px;">CERITA LAINYA ></a>
+        <div class="col-xs-12 no-padding text-center">
+          <a href="#" class="btn btn-success" style="width:220px; border-radius:1px;">INSPIRASI LAINNYA ></a>
         </div>
       </div>
       <div class="clearfix">
@@ -237,6 +237,7 @@
     </div>
   </div>
 </div>
+<!--
 <div class="bottom-quote">
   <div class="container-fluid content m-t-40 m-b-40">
     <div class="col-sm-7">
@@ -245,6 +246,7 @@
     </div>
   </div>
 </div>
+-->
 
 <!-- <div id='collect-point'>
   <div class='content bg-white'>

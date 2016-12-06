@@ -12,7 +12,7 @@
  */
 
 get_header(); ?>
-<?php
+  <?php
 	$feat_post = get_field('this_week_article_from_moms');
 	if( $feat_post ):
 
@@ -21,42 +21,72 @@ get_header(); ?>
 	setup_postdata( $post );
 	$featured_post_image = (wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')); 
 ?>
-<div class='banner-tips' style="background: URL('<?php echo $featured_post_image[0]; ?>') no-repeat center center fixed">
-  <div class='col-md-6'>
-    <div class='content'>
-      <div class='weekly'>Artikel Minggu Ini dari Ibu</div>
-      <?php the_title('<h3>', '</h3>'); ?>
-      <p class='author'>Oleh <?php the_author(); ?></p>
-      <p><?php the_excerpt(); ?></p>
-      <a class='more' href="<?php the_permalink(); ?>">
-        <div class='sprites more'></div>
-        Baca selengkapnya
-      </a>
-    </div>
-  </div>
-  <div class='clearfix'></div>
-</div>
-    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-<?php endif; ?>
-<div class ="artikel col-md-12">
-	<div class="content">
-		<div class="filters col-md-9 padding_none hidden-xs hidden-sm">
-			<?php wp_nav_menu(array(
+    <div class="jumbotron">
+      <div class="col-lg-offset-2">
+        <?php wp_nav_menu(array(
 			    'theme_location' => 'artikel_tips_filter',
 			    'echo' => true,
 			    'menu' => 'artikel_tips_filter',
 			    'menu_class' => 'cat'
 			    ));
 			?>
-		</div>
-		<div class="col-xs-6 visible-xs visible-sm sorting-artikel padding_none">
-			<?php get_template_part( 'filter', 'content' ); ?>
-		</div>
-		<div class="text-right sorting-artikel col-xs-6 col-md-3 padding_none">
-			<?php get_template_part( 'sorting', 'content' ); ?>
-		</div>
+      </div>
+    </div>
 
-	<?php
+
+    <div class="container">
+      <div class='banner-tips' style="background: URL('<?php echo $featured_post_image[1]; ?>') no-repeat center center fixed">
+        <div class="row">
+          <div class='col-sm-12 col-md-5 col-lg-6 columns'>
+            <div class='images'>
+              <a href="<?php the_permalink(); ?>"><img src="<?php echo $featured_post_image[0]; ?>" class="full-width"></img></a>
+
+            </div>
+          </div>
+          <div class='col-sm-12 col-md-5 col-lg-6 columns'>
+            <div class='weekly'>Artikel Minggu Ini dari Ibu</div>
+            <?php the_title( '<h3>', '</h3>'); ?>
+              <p class='author'>Oleh
+                <?php the_author(); ?>
+              </p>
+              <p>
+                <?php the_excerpt(); ?>
+              </p>
+              <a class='more' href="<?php the_permalink(); ?>">
+                <div class='sprites more'>
+                  Baca selengkapnya
+                </div>
+              </a>
+          </div>
+        </div>
+        <div class='clearfix'></div>
+      </div>
+    </div>
+    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+      <?php endif; ?>
+        <div class="artikel col-md-12">
+          <div class="content">
+            <!--
+						<div class="filters col-md-9 padding_none hidden-xs hidden-sm">
+							<?php wp_nav_menu(array(
+			    'theme_location' => 'artikel_tips_filter',
+			    'echo' => true,
+			    'menu' => 'artikel_tips_filter',
+			    'menu_class' => 'cat'
+			    ));
+			?>
+						</div>
+-->
+            <!--
+						<div class="col-xs-6 visible-xs visible-sm sorting-artikel padding_none">
+							<?php get_template_part( 'filter', 'content' ); ?>
+						</div>
+						<div class="text-right sorting-artikel col-xs-6 col-md-3 padding_none">
+							<?php get_template_part( 'sorting', 'content' ); ?>
+						</div>
+-->
+
+            <?php
 		if(isset($_GET['sort'])) {
 			$paramSort = $_GET['sort'];
 			switch ($paramSort) {
@@ -107,44 +137,67 @@ get_header(); ?>
 		}
 		query_posts($args);
 	?>
-		<div class="masonry">
-			<?php
+              <div class="container">
+                <div class="masonry inspirasi">
+                  <?php
 			// Start the loop.
 			while ( have_posts() ) : the_post();
 			?>
-			 <div class="post narrow <?php foreach(get_the_category() as $category) {echo $category->slug . ' ';} ?>">
-		      <div class='white'>
-		      	<a href="<?php the_permalink(); ?>"><img src="<?php the_field('square_feature_image'); ?>" class="full-width"/></a>
-		        <!-- <img class='full-width' src='assets/images/thumb-art.jpg'> -->
-		        <div class='subcontent'>
-		          <a href="<?php the_permalink(); ?>"><p class='desc'><?php the_title(); ?></p></a>
-		        </div>
-		        <hr>
-		        <div class='subcontent'>
-		          <ul class='desc-post'>
-		            <li>
-		            	<?php echo get_avatar( get_the_author_meta('ID') ); ?>
-		            </li>
-		            <li>
-		              <div class='author'><?php the_author(); ?></div>
-		              <!-- fixed -->
-		              <div class='date'><?php the_time('j F Y'); ?></div>
-		            </li>
-		          </ul>
-		          <div class='clearfix'></div>
-		        </div>
-		      </div>
-			</div>
-			<?php
+                    <div class="post narrow <?php foreach(get_the_category() as $category) {echo $category->slug . ' ';} ?>">
+                      <div class=''>
+                        <a href="<?php the_permalink(); ?>"><img src="<?php the_field('square_feature_image'); ?>" class="full-width" style="border:#e1e1e1 solid 5px"/></a>
+                        <!-- <img class='full-width' src='assets/images/thumb-art.jpg'> -->
+                        <div class='subcontent text-center'>
+
+
+                          <div class="author title-post">
+                            <?php the_category(); ?>
+                          </div>
+                          <a href="<?php the_permalink(); ?>">
+                            <p class='title-post'>
+                              <?php the_title(); ?>
+                            </p>
+                            <div class="text-success link-post">
+                              Baca Selengkapnya
+                            </div>
+                          </a>
+                        </div>
+                        <hr>
+                        <div class='subcontent'>
+                          <ul class='desc-post'>
+                            <!--
+													<li>
+														<?php echo get_avatar( get_the_author_meta('ID') ); ?>
+													</li>
+													<li>
+														<div class='author'>
+															<?php the_author(); ?>
+														</div>
+														 fixed 
+														<div class='date'>
+															<?php the_time('j F Y'); ?>
+														</div>
+                            
+													</li>
+-->
+                          </ul>
+                          <div class='clearfix'></div>
+                        </div>
+                      </div>
+                    </div>
+                    <?php
 			// End the loop.
 			endwhile;
 
 			?>
-			<div class="pagination"><?php next_posts_link(); ?></div>
+                      <div class="pagination">
+                        <?php next_posts_link(); ?>
+                      </div>
 
-		</div>
-	</div>
-</div>
-		<div class="clearfix"></div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
 
-<?php get_footer(); ?>
+        <?php get_footer(); ?>

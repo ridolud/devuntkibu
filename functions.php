@@ -1,4 +1,4 @@
-<?php 
+<?php
 // add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 // function theme_enqueue_styles() {
 //     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
@@ -93,9 +93,9 @@ function get_top_bid_timestamp($pid) {
  */
 function dettol_scripts() {
 	wp_enqueue_script('jquery');
-	wp_enqueue_style( 'slick', get_stylesheet_directory_uri() . '/slick.css'); 
+	wp_enqueue_style( 'slick', get_stylesheet_directory_uri() . '/slick.css');
 	if ( is_page('tips-artikel') || is_category() || is_page_template('unduh.php') ) {
-        // wp_enqueue_style( 'salvatore', get_stylesheet_directory_uri() . '/assets/salvatore.css'); 
+        // wp_enqueue_style( 'salvatore', get_stylesheet_directory_uri() . '/assets/salvatore.css');
         // wp_enqueue_script( 'salvatore', get_stylesheet_directory_uri() . '/assets/javascripts/salvatore.js', array('jquery'), '1.0.0', true );
         wp_register_script('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js', array('jquery'));
         wp_enqueue_script('jquery-ui');
@@ -120,7 +120,7 @@ function dettol_scripts() {
 
         wp_register_style('selectpicker_style', get_stylesheet_directory_uri() . '/assets/stylesheets/bootstrap-select.min.css');
         wp_enqueue_style('selectpicker_style');
-	} 
+	}
     if ( is_page_template('reedem.php') ) {
         wp_register_script('selectpicker', get_stylesheet_directory_uri() . '/assets/javascripts/bootstrap-select.min.js', array('jquery'));
         wp_enqueue_script('selectpicker');
@@ -161,7 +161,7 @@ function wpb_track_post_views ($post_id) {
     if ( !is_single() ) return;
     if ( empty ( $post_id) ) {
         global $post;
-        $post_id = $post->ID;    
+        $post_id = $post->ID;
     }
     wpb_set_post_views($post_id);
 }
@@ -268,7 +268,7 @@ function get_avatar_url( $id_or_email, $args = null ) {
             $user = get_user_by( 'id', (int) $id_or_email->post_author );
         }
     }
- 
+
     if ( !$email_hash ) {
         if ( $user ) {
             $email = $user->user_email;
@@ -655,6 +655,12 @@ table th[class*="col-"] {
   </style>';
 }
 
+//Remove all update notifications
+/* function remove_core_updates(){
+global $wp_version;return(object) array('last_checked'=> time(),'version_checked'=> $wp_version,);
+}
+add_filter('pre_site_transient_update_core','remove_core_updates');
+add_filter('pre_site_transient_update_plugins','remove_core_updates');
+add_filter('pre_site_transient_update_themes','remove_core_updates');*/
 
-
-
+?>

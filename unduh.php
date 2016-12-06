@@ -122,18 +122,30 @@ get_header(); ?>
 			while ( $the_query->have_posts() ) : $the_query->the_post();
 			?>
 			<div class="the_post">
-				<div class="post narrow <?php foreach(get_the_category() as $category) {echo $category->slug . ' ';} ?>">
-			      <div class='white'>
+				<div class="post narrow <?php foreach(get_the_category() as $category) {echo $category->slug . ' ';} ?>" >
+			      <div class=''>
 			        <img class='full-width' src="<?php the_field('splash_picture'); ?>">
+<!--
 			        <div class='subcontent'>
 			          <p class='desc'><?php the_title(); ?></p>
 			          <?php the_excerpt(); ?>
 			        </div>
+-->
 			        <hr>
-			        <div class='subcontent_2 text-center'>
+			        <div class='text-center' style="margin-bottom:20px;">
+                <div class="btn-info col-lg-6 col-md-6">
+                  PRINT
+                </div>
+                <div class="btn-success col-lg-6 col-md-6">
+                  DOWNLOAD
+                </div>
+                </br>
+                
+<!--
 				        <a href="#" class="unduh" data-toggle="modal" data-target="#modal_<?php echo get_the_ID(); ?>">
 		  					Unduh & Cetak
 						</a>
+-->
 					</div>
 			      </div>
 				</div>
@@ -168,6 +180,9 @@ get_header(); ?>
 			<div class="pagination"><?php next_posts_link('Older Entries', $the_query->max_num_pages); ?></div>
 
 		</div>
+  <div class="btn-success btn-lg col-lg-4 col-md-4 col-lg-offset-3 col-md-offset-3 text-center">
+                  AKTIVITAS LAINNYA >
+                </div>
 	</div>
 		<div class="clearfix"></div>
 </div>
