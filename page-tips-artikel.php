@@ -19,56 +19,66 @@ get_header(); ?>
 	// override $post
 	$post = $feat_post;
 	setup_postdata( $post );
-	$featured_post_image = (wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')); 
+	$featured_post_image = (wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'));
 ?>
-    <div class="jumbotron">
-      <div class="col-lg-offset-2">
-        <?php wp_nav_menu(array(
-			    'theme_location' => 'artikel_tips_filter',
-			    'echo' => true,
-			    'menu' => 'artikel_tips_filter',
-			    'menu_class' => 'cat'
-			    ));
-			?>
-      </div>
+
+<div class="sub-header">
+	<div class="container">
+        <ul class="nav navbar-nav">
+					<li><a href="#">Category1 <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+					<li><a href="#">Category2 <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+					<li><a href="#">Category3 <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+      	</ul>
+	</div>
+</div>
+<!-- <div class='banner-tips' style="background: URL('<?php echo $featured_post_image[0]; ?>') no-repeat center center fixed">
+  <div class='col-md-6'>
+    <div class='content'>
+      <div class='weekly'>Artikel Minggu Ini dari Ibu</div>
+      <?php the_title('<h3>', '</h3>'); ?>
+      <p class='author'>Oleh <?php the_author(); ?></p>
+      <p><?php the_excerpt(); ?></p>
+      <a class='more' href="<?php the_permalink(); ?>">
+        <div class='sprites more'></div>
+        Baca selengkapnya
+      </a>
     </div>
-
-
-    <div class="container">
-      <div class='banner-tips' style="background: URL('<?php echo $featured_post_image[1]; ?>') no-repeat center center fixed">
-        <div class="row">
-          <div class='col-sm-12 col-md-5 col-lg-6 columns'>
-            <div class='images'>
-              <a href="<?php the_permalink(); ?>"><img src="<?php echo $featured_post_image[0]; ?>" class="full-width"></img></a>
-
-            </div>
-          </div>
-          <div class='col-sm-12 col-md-5 col-lg-6 columns'>
-            <div class='weekly'>Artikel Minggu Ini dari Ibu</div>
-            <?php the_title( '<h3>', '</h3>'); ?>
-              <p class='author'>Oleh
-                <?php the_author(); ?>
-              </p>
-              <p>
-                <?php the_excerpt(); ?>
-              </p>
-              <a class='more' href="<?php the_permalink(); ?>">
-                <div class='sprites more'>
-                  Baca selengkapnya
-                </div>
-              </a>
-          </div>
-        </div>
-        <div class='clearfix'></div>
-      </div>
-    </div>
+  </div>
+  <div class='clearfix'></div>
+</div> -->
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-      <?php endif; ?>
-        <div class="artikel col-md-12">
-          <div class="content">
-            <!--
-						<div class="filters col-md-9 padding_none hidden-xs hidden-sm">
-							<?php wp_nav_menu(array(
+<?php endif; ?>
+<div class ="artikel bg-white">
+
+	<div class="container p-l-30 p-r-30 ">
+		<div class="row no-margin m-t-20 b-t-20 full-height">
+			<div class="col-md-12 m-b-20 b-a b-success padding-10 text-center">
+				<h4>KEBERSIHAN SIKECIL</h4>
+				<p>
+					"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+				</p>
+			</div>
+			<div class="col-sm-6 no-padding">
+				<a href="#" class="thumbnail no-padding">
+      		<img src="<?php echo $featured_post_image[0]; ?>" alt="">
+    		</a>
+			</div>
+			<div class="col-sm-6">
+				<p>KEBERSIHAN SIKECIL</p>
+				<h1>Lindungi Keluarga Ibu dari Serangan Flu dan Batuk</h1>
+				<p><span><?php the_author(); ?></span> - <span>{ex: 2 days ago}</span></p>
+				<p><?php the_excerpt(); ?> <a href="#" class="text-success">Baca Selengakapnya</a></p>
+				<p></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+
+
+
+		<div class="filters col-md-9 padding_none hidden-xs hidden-sm">
+			<?php wp_nav_menu(array(
 			    'theme_location' => 'artikel_tips_filter',
 			    'echo' => true,
 			    'menu' => 'artikel_tips_filter',
