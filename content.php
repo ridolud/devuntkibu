@@ -27,9 +27,18 @@
     <span class="article-tag"><a style="color:#606060;" href="<?= get_tag_link($tag_article->term_id); ?>"><?= $tag_article->name; ?></a></span>
 
     <?php } ?>
+
     </p>
 
-    <p><span class="subscribe-topic"><a href="#">SUBSCRIBE TOPIK INI</a></span>  <span style="color:#d4d4d4;padding:0px 20px;">BAGI ARTIKEL INI</span><p>
+    <p><span class="subscribe-topic"><a href="#">SUBSCRIBE TOPIK INI</a></span>  <span style="color:#d4d4d4;padding:0px 20px;">BAGI ARTIKEL INI</span>
+      <span>
+        <!-- Begin of fitur untuk share to socmed -->
+        <?php
+          social_warfare();
+          echo do_shortcode('[whatsapp]'); ?>
+        <!-- End of fitur untuk share to socmed -->
+      </span>
+    <p>
     <p style="margin-top:50px"><h3 class="article-tittle">Yuk daftarkan email kamu dan jangan sampai ketinggalan<br> artikel-artikel menarik dari UntukIbu.</h3></p>
     <p>
       <form>
@@ -46,7 +55,7 @@
 
       </div>
     </p>
-    <h2 style="color:#d4d4d4;margin-top:50px;font-wight:100px;">Artikel Lainya</h2>
+    <h2 style="color:#d4d4d4;margin-top:50px;font-wight:100px;">Artikel Lainnya</h2>
   </div>
   <div class="container-fluid no-padding m-b-40">
     <?php

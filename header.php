@@ -80,9 +80,11 @@
             </li> -->
           </ul>
           <ul class='nav navbar-nav navbar-right dettol-menu-header'>
-						<li><a style="border-bottom: 4px solid #97e241;" href="<?php echo site_url(); ?>">Beranda</a></li>
-            <li><a href="<?php echo get_permalink(8); ?>">Tips & Artikel</a></li>
-            <li><a href="<?php echo get_permalink(2086) ?>">Unduh</a></li>
+						<li><a style="<?php if (is_front_page()) echo 'border-bottom: 4px solid #97e241;'; ?>" href="<?php echo site_url(); ?>">Home</a></li>
+            <li><a href="<?php echo get_permalink(8); ?>" style="<?php if (is_page('tips-artikel')) echo 'border-bottom: 4px solid #97e241;'; ?>">Tips & Artikel</a></li>
+						<li><a href="<?php echo get_permalink(); ?>" style="<?php if (is_page('video')) echo 'border-bottom: 4px solid #97e241;'; ?>">Video</a></li>
+							<li><a href="<?php echo get_permalink(); ?>" style="<?php if (is_page('inspirasi-ibu')) echo 'border-bottom: 4px solid #97e241;'; ?>">Inspirasi Ibu</a></li>
+            <li><a href="<?php echo get_permalink(2086) ?>" style="<?php if (is_page('unduh')) echo 'border-bottom: 4px solid #97e241;'; ?>">Aktivitas</a></li>
             <!-- <li class="dropdown">
               <a href="<?php echo get_permalink(2074);?>">Rejeki Keluarga Sehat</a>
               <ul class="dropdown-menu" role="menu">
@@ -92,7 +94,7 @@
                 <li><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Lelang' ) ) ); ?>">Lelang</a></li>
               </ul>
             </li> -->
-            <li><a href="http://dettol.co.id/products" target="_blank">Produk</a></li>
+            <li><a href="http://dettol.co.id/products" target="_blank">Produk Dettol</a></li>
 
           </ul>
         </div>

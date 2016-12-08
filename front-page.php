@@ -41,7 +41,7 @@
               <div class='inner-caption'>
               <h1 class="bg-white padding-15" style="margin-bottom:0px;"><?php the_sub_field('title'); ?></h1>
               <!-- <p><?php the_sub_field('subtitle'); ?></p> -->
-              <a href="<?php the_sub_field('title'); ?>" class="btn btn-success">BACA SELENGKAPNYA</a>
+              <a href="<?php the_sub_field('url'); ?>" class="btn btn-success">BACA SELENGKAPNYA</a>
               </div>
 
             </div>
@@ -76,7 +76,7 @@
     </div>
     <div class="col-sm-12 carousel-post">
       <?php
-        $args = array( 'numberposts' => '8' );
+        $args = array( 'numberposts' => '8', 'post_status' => 'publish' );
         $post_categories = wp_get_post_categories( $post_id );
         $cats = array();
         $recent_posts = wp_get_recent_posts( $args );
@@ -113,7 +113,7 @@
 
     <div class="row clearfix text-center p-lr-50 m-b-40" style="" >
       <h2 class=" no-margin title-block">Inspirasi Ibu</h2>
-      <a href="#" class="btn btn-info hidden-xs p-l-15 p-r-15 m-t-20" style="font-size:22px;border-radius:10px"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/edit.svg" height="32" alt="" /> TULIS CERITA IBU DISINI</a>
+      <a href="<?php echo admin_url('post-new.php');?>" class="btn btn-info hidden-xs p-l-15 p-r-15 m-t-20" style="font-size:22px;border-radius:10px"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/edit.svg" height="32" alt="" /> TULIS CERITA IBU DISINI</a>
     </div>
 
     <?php
@@ -216,15 +216,18 @@
 </div>
 <div class="container-fluid content white home">
   <div class="col-md-6">
-    <h2 class="title-block-left">Untuk Keluarga Dettol</h2>
+    <h2 class="title-block-left">Video UntukIbu</h2>
     <!-- <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/dyrC_bYIY3I" frameborder="0" allowfullscreen> -->
     <object height="400" style="width:100%;" data="http://www.youtube.com/v/dyrC_bYIY3I?controls=0&start=0">
     </object>
+    <div class="col-xs-12 no-padding text-center">
+      <a href="#" class="btn btn-success" style="width:220px; border-radius:1px;">VIDEO LAINNYA ></a>
+    </div>
   </div>
   <div class="col-md-6">
     <h2 class="title-block-left">Aktivitas</h2>
     <p>
-      Unduh dan cetak beragam aktivitas bersama si kecil di siini.
+      Unduh dan cetak beragam aktivitas bersama si kecil <a href="#">di sini.</a>
     </p>
     <?php
     $args = array(
@@ -284,7 +287,7 @@
       <img min-height="150" src="http://localhost:8888/wp-content/uploads/2016/02/cover1.jpg" alt="...">
     </a>
     </div> -->
-    <div class="col-xs-12 no-padding text-right">
+    <div class="col-xs-12 no-padding text-center">
       <a href="#" class="btn btn-success" style="width:220px; border-radius:1px;">AKTIVITAS LAINNYA ></a>
     </div>
   </div>
