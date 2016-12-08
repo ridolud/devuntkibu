@@ -663,4 +663,54 @@ add_filter('pre_site_transient_update_core','remove_core_updates');
 add_filter('pre_site_transient_update_plugins','remove_core_updates');
 add_filter('pre_site_transient_update_themes','remove_core_updates');*/
 
+// Begin of membatasi tampilan list post
+function posts_for_current_author($query) {
+	global $pagenow;
+
+	if( 'edit.php' != $pagenow || !$query->is_admin )
+	    return $query;
+
+	if( !current_user_can( 'edit_others_posts' ) ) {
+		global $user_ID;
+		$query->set('author', $user_ID );
+	}
+	return $query;
+}
+add_filter('pre_get_posts', 'posts_for_current_author');
+//End of membatasi tampilan list post
+
+//Begin of UntukIbu Social Sharing Button
+/** function untukibu_social_sharing_buttons($content) {
+	global $post;
+	if(is_singular() || is_home()){
+
+		// Get current page URL
+		$untukibuURL = urlencode(get_permalink());
+
+		// Get current page title
+		$untukibuTitle = str_replace( ' ', '%20', get_the_title());
+
+		// Construct sharing URL without using any script
+		$twitterURL = 'https://twitter.com/intent/tweet?text='.$untukibuTitle.'&amp;url='.$untukibuURL.'&amp;via=Untukibu';
+		$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$untukibuURL;
+		$googleURL = 'https://plus.google.com/share?url='.$untukibuURL;
+		$whatsappURL = 'whatsapp://send?text='.$untukibuTitle . ' ' . $untukibuURL;
+
+		// Add sharing button at the end of page/page content
+		$content .= '<div class="untukibu-social">';
+		$content .= '<a class="untukibu-link untukibu-facebook" href="'.$facebookURL.'" target="_blank">Facebook</a>';
+		$content .= '<a class="untukibu-link untukibu-twitter" href="'. $twitterURL .'" target="_blank">Twitter</a>';
+		$content .= '<a class="untukibu-link untukibu-googleplus" href="'.$googleURL.'" target="_blank">Google+</a>';
+		$content .= '<a class="untukibu-link untukibu-whatsapp" href="'.$whatsappURL.'" target="_blank">WhatsApp</a>';
+		$content .= '</div>';
+
+		return $content;
+	}else{
+		// if not a post/page then don't include sharing button
+		return $content;
+	}
+};
+add_filter( 'the_content', 'untukibu_social_sharing_buttons');
+//End of UntukIbu Social Sharing Button **/
+
 ?>

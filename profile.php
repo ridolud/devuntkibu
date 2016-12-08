@@ -1,5 +1,5 @@
 <?php
-/*
+/* 
 Template Name: profile Template
 */
 ?>
@@ -7,135 +7,50 @@ Template Name: profile Template
 <?php get_header(); ?>
 <?php $current_user = wp_get_current_user(); //dd($current_user) ?>
 <div id='profile'>
-  <div class='banner-tips' style="background:URL('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bg-profile-page.jpg') no-repeat center top ;background-size:40%;">
-    <div class='warpper'></div>
+  <div class='banner-tips'>
+    <div class='blur' style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), URL('<?php echo get_avatar_url( $current_user->ID );?>') no-repeat center center fixed"></div>
     <div class='content'>
-        <div class="col-sm-12 text-center">
-            <h1 class="m-b-80"><span class="bold text-success">PORFILE</span> PAGE</h1>
-        </div>
-        <div class="container">
-            <div class="row m-b-20">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <p>Hi Ibu, Point Ibu <span class="text-success"><?php echo number_format(get_field('loyalty_points', 'user_'.get_current_user_id())); ?></span></p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-3">
-                    <button type="" class="btn btn-custom-dettol btn-block" name="button">EDIT PROFILE</button>
-                    <button type="" class="btn btn-custom-dettol btn-block" name="button">LOG OUT</button>
-                    <div class="panel panel-default m-t-20 p-t-80 p-b-80">
-                        <p class="text-center"><i class="glyphicon glyphicon-plus"></i><br>
-                        <span>UPLOAD PHOTO</span></p>
-                    </div>
-                </div>
-                <div class="col-sm-9 ">
-                    <form class="">
-                        <div class="row form-group has-success ">
-                            <label for="" class="label-control col-sm-12 m-b-20"><span class="bold">NAMA PANGILAN</span></label>
-                            <div class="col-sm-4">
-                                <input type="text" name="" class="form-control" placeholder="Nama Panggilan" value="">
-                            </div>
-                            <div class="col-sm-8">
-                                <p>You can only set your UntukIbu nickname once. Your nickname will be displayed for Ratings & Reviews.</p>
-                            </div>
-                        </div>
-                        <div class="row form-group has-success">
-                            <label for="" class="label-control col-sm-12 m-b-20"><span class="bold">DATA DIIRI</span></label>
-                        </div>
-                        <div class="row form-group has-success">
-                            <label for="" class="custom-label label-control col-sm-12 m-b-20">BASIC INFO</label>
-                            <div class="col-sm-4">
-                                <input type="text" name="" class="form-control" placeholder="Nama Depan" value="">
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="text" name="" class="form-control" placeholder="Nama Belakang" value="">
-                            </div>
-                        </div>
-                        <div class="row form-group has-success">
-                            <div class="col-sm-4">
-                                <input type="text" name="" class="form-control" placeholder="E-mail" value="">
-                            </div>
-                        </div>
-                        <div class="row form-group has-success">
-                            <div class="col-sm-4">
-                                <input type="checkbox" name="" class="custom-checkbox form-contol" value=""><label>Subcribe to email</label>
-                            </div>
-                        </div>
-                        <div class="row form-group has-success">
-                            <label for="" class="custom-label label-control col-sm-12 m-b-20">ALAMAT</label>
-                            <div class="col-sm-4">
-                                <input type="text" name="" class="form-control" placeholder="Alamat" value="">
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="text" name="" class="form-control" placeholder="Kode Pos" value="">
-                            </div>
-                        </div>
-                        <div class="row form-group has-success">
-                            <div class="col-sm-4">
-                                <input type="text" name="" class="form-control" placeholder="Kota" value="">
-                            </div>
-                            <div class="col-sm-4">
-                                <select name="" class="form-control" placeholder="Provinsi"><option value="">Provinsi</option></select>
-                            </div>
-                        </div>
-                        <div class="row form-group has-success">
-                            <label for="" class="custom-label label-control col-sm-12 m-b-20">NO TELEPON</label>
-                            <div class="col-sm-4">
-                                <input type="text" name="" class="form-control" placeholder="Nama Depan" value="">
-                            </div>
-                        </div>
-                        <div class="row form-group has-success">
-                            <label for="" class="custom-label label-control col-sm-12 m-b-20">TANGGAL LAHIR</label>
-                            <div class="col-sm-3">
-                                <input type="text" name="" class="form-control" placeholder="Tanggal" value="">
-                            </div>
-                            <div class="col-sm-3">
-                                <input type="text" name="" class="form-control" placeholder="Bulan" value="">
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="text" name="" class="form-control" placeholder="Tahun" value="">
-                            </div>
-                        </div>
-                        <div class="row form-group has-success">
-                            <label for="" class="custom-label label-control col-sm-12 m-b-20">JUMLAH ANAK</label>
-                            <div class="col-sm-4">
-                                <input type="text" name="" class="form-control" placeholder="Belum memiliki anak" value="">
-                            </div>
-                        </div>
-                        <div class="row form-group has-success">
-                            <div class="col-sm-4">
-                                <button type="" class="btn btn-block btn-success" name="button">UPDATE</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+      <div class='col-md-2 padding_right_none col-sm-3'>
+        <?php echo get_avatar($current_user->ID); ?>
+      </div>
+      <div class='col-md-6 col-sm-9'>
+        <h3><?php echo $current_user->display_name ?></h3>
+        <!-- <h4><</h4> -->
+        <p>
+          <span class='font-regular'>Register.</span>
+          <?php echo $current_user->user_registered ?>
+        </p>
+        <p>
+          <span class='font-regular'>Last Login.</span>
+          <?php echo get_last_login_current_user(); ?>
+        </p>
+      </div>
+      <div class='col-xs-12'>
+        <ul class='submenu'>
+          <li>
+            <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Notifikasi' ) ) ); ?>">Notifikasi</a>
+          </li>
+          <li>
+            <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Riwayat Poin' ) ) ); ?>">Riwayat Poin</a>
+          </li>
+          <li>
+            <a class='active' href="<?php echo get_permalink(1991); ?>">Pengaturan Profil</a>
+          </li>
+        </ul>
+      </div>
       <div class='clearfix'></div>
     </div>
-    <div class="content">
-        <div class="container">
-            <div class="col-sm-12">
-                <div class="row text-center">
-                    <h1 class=" text-success">Cerita Inspiratifku</h1>
-                    <p>Tuliskan cerita inspiratifmu di bawah ini. Pastikan cerita ibu mudah di baca dan inspiratif, ya!</p>
-                </div>
-                <div class="row">
-                    <div class="col-xs-4 col-xs-offset-4">
-                        <a href="#" class="btn btn-block btn-success">SUBMIT CERITA</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
   </div>
-  <!-- <div class='content'>
+  <div class='content'>
     <div class='col-sm-8 col-md-5'>
       <?php if (have_posts()) : while (have_posts()) : the_post();?>
         <?php the_content(); ?>
       <?php endwhile; endif; ?>
     </div>
+    <div class="col-lg-3 col-lg-offset-4 col-md-4 col-md-offset-3 hidden-xs hidden-sm">
+      <?php get_template_part( 'sidebar', 'profile' ); ?>
+    </div>
     <div class='clearfix'></div>
-  </div> -->
+  </div>
 </div>
 <?php get_footer();

@@ -9,11 +9,11 @@
 ?>
 
     <footer>
-      
-        <div class="bottom-quote">
-  <div class="container-fluid content m-t-40 m-b-40">
+
+<div class="bottom-quote">
+  <div class="footer-background container-fluid content">
     <div class="col-sm-7">
-      <h2 class="tittle-block">Untuk Ibu, persembahan Dettol.</h2>
+      <h2>Untuk Ibu, persembahan Dettol.</h2>
       <p style="font-size:18px;">Pengalaman indah penuh kasih terbentang di depan mata dan tugas mulia sebagai Ibu kini telah dimulai. Bersama Dettol, tugas ibu menjaga kebersihan dan kesehatan Si Kecil akan lebih mudah dan nyaman.</p>
     </div>
   </div>
@@ -79,7 +79,7 @@
             </li>
             <li>
               <a href='#'>Banyak lainnya</a>
-            </li> 
+            </li>
           </ul>
         </div>
 -->
@@ -151,14 +151,14 @@
             </li>
              <li>
               <a href='#'>Peta situs</a>
-            </li> 
+            </li>
           </ul>
         </div>
 -->
         <div class='clearfix'></div>
       <div class="content">
       </div>
-      
+
     </footer>
     <div class='footer-white'>
       <div class='col-sm-3 col-xs-12 col-lg-2'>
@@ -175,8 +175,11 @@
           </li>
         </ul>
       </div>
-      <div class='col-sm-5 col-xs-12 col-lg-5'>
-        <p class='copy'>Hak cipta &copy; Reckitt Benckiser. Hak cipta dilindungi Undang-Undang.</p>
+      <div class='col-sm-5 col-xs-12 col-lg-3'>
+        <p class='copy'>&copy; Copyright 2016 </p>
+      </div>
+      <div class='col-sm-5 col-xs-12 col-lg-3'>
+        <p class='copy'>Syarat dan Ketentuan Kebijakan Privasi </p>
       </div>
       <?php if ( is_page_template('loyalty.php') || is_page_template('pointcollection.php') || is_page_template('reedem.php') || is_page_template('about.php') ||
         is_page_template('auction.php' ) ) { ?>
